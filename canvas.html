@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="theme-color" content="#efefef">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <title>Draw</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            #wrap {
+                padding: 5px;
+                width: 100vw;
+                height: 100dvh;
+                background-color: #333;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            #content {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                gap: 5px;
+            }
+
+            #header {
+                height: 50px;
+                display: flex;
+                flex-direction: row;
+                gap: 5px;
+                align-items: center;
+            }
+
+            #menu {
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            #message {
+                padding: 5px;
+                font-size: 2rem;
+                font-weight: bold;
+                color: #fff;
+            }
+
+            #subMessage {
+                padding: 5px;
+                font-size: 0.8rem;
+                color: #fff;
+            }
+
+            .title {
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: #fff;
+            }
+
+            .button {
+                flex: 1;
+                background-color: #97a5a8;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: #fff;
+                border-radius: 5px;
+            }
+
+            .button:hover {
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="wrap">
+
+            <div id="header">
+                <div id="message" class="title">お絵描きボード</div>
+                <div id="subMessage" class="title">自由にメッセージを書いて、109にいる人たちにメッセージを送ろう!</div>
+            </div>
+
+            <div
+                id="content"
+            >
+                <canvas
+                    touch-action="none"
+                    id="board"
+                >
+                    Opps, you cannot play draw N guess with this browser!
+                </canvas>
+
+                <div id="menu">
+                    <div id="toggleCameraButton" class="button" style="background: #71C6D4">カメラ切り替え</div>
+                    <div id="clearCanvasButton" class="button" style="background: #EB75A2">キャンバスクリア</div>
+                    <div id="sendMessageButton" class="button" style="background: #36BDEF">メッセージ送信</div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/lodash/4.17.2/lodash.min.js"></script>
+        <script src="js/vendors/pep.js"></script>
+        <script src="js/libs/Board.js"></script>
+        <script src="js/libs/Pointer.js"></script>
+        <script src="js/libs/Pen.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
